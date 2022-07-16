@@ -15,7 +15,7 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
 
-  const ENDPOINT = 'localhost:5000';
+  const ENDPOINT = `https://${process.env.REACT_APP_BACK_BASE_URL}`;
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
